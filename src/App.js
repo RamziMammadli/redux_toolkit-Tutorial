@@ -37,6 +37,15 @@ const App = () => {
       <input type='text' placeholder='name' value={name} onChange={(e) => setName(e.target.value)}/>
       <button onClick={() => sendName()}>SEND YOUR NAME</button>
 
+      {count}
+      <button onClick={() => dispacth(increment())}>+++</button>
+      <button onClick={() => dispacth(decrement())}>---</button>
+      <button onClick={() => dispacth(incrementByAmount(20))}>+20</button>
+
+
+      {products && products.map( item => {
+        return <p>{item.title}</p>
+      })}
 
     </div>
   )
